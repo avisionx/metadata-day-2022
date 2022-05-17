@@ -3,16 +3,10 @@
   <p align="center">
     Regex based field search on database fields ✨
     </br>
-    <a href="https://github.com/avisionx/take-notes/#table-of-contents"><strong>Explore the docs »</strong></a><br/>
-    <a href="https://avisionx.github.io/take-notes">Website</a>
-    .
-    <a href="https://github.com/avisionx/take-notes/issues">Report Bug</a>
-    .
-    <a href="https://github.com/avisionx/take-notes/issues">Request Feature</a>
+    <a href="https://github.com/avisionx/metadata-day-2022/#table-of-contents"><strong>Explore the docs »</strong></a>
   </p>
 </p>
 
-<img src="output.png" alt="" width="100%">
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -32,7 +26,9 @@
 
 ## About The Project
 
-![Take Notes App](https://user-images.githubusercontent.com/32339251/94259263-d175a680-ff4b-11ea-9499-ac5860c900ba.gif)
+<p align="center">
+    <img src="output.png" alt="" width="100%">
+</p>
 
 There are a lot of ToDO/Notes tracker available online, however, I didn't find one that is realtime and cross-platform at the same time for all devices and would suit my needs so I created this one.
 
@@ -74,7 +70,7 @@ npm install npm@latest -g
 1. Clone the repo
 
 ```sh
-git clone https://github.com/avisionx/take-notes.git
+git clone https://github.com/avisionx/metadata-day-2022.git
 ```
 
 2. Install NPM packages
@@ -134,7 +130,7 @@ _For more examples, please refer to the [Create React App Documentation](https:/
 
 ## Roadmap
 
-See the [open issues](https://github.com/avisionx/take-notes/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/avisionx/metadata-day-2022/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -160,4 +156,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Avi Garg - [https://avisionx.net/](https://avisionx.net/) - hello@avisionx.net
 
-Project Link: [https://github.com/avisionx/take-notes](https://github.com/avisionx/take-notes)
+Project Link: [https://github.com/avisionx/metadata-day-2022](https://github.com/avisionx/metadata-day-2022)
