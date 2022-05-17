@@ -3,7 +3,7 @@
   <p align="center">
     Regex based field search on database fields ✨
     </br>
-    <a href="https://github.com/avisionx/metadata-day-2022/#table-of-contents"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/avisionx/metadata-day-2022/#table-of-contents"><strong>Explore the Docs »</strong></a>
   </p>
 </p>
 
