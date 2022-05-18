@@ -27,12 +27,14 @@
 Datahub currently doesn't have a feature to allow one to search for databases based on fields. We propose a regex based field search powered by elasticsearch (this can be also done using lucene) on fields for better management and tracking of it. 
 
 Here's why:
+
 - Allow old data to be reused for new applications - Since one would first search for relevant fields before recreating another dataset
 - Save Money - As datasets will be reused we'll reduce the cost significantly
 - Improve performance - As the number of datasets will decrease in the system it would allow datastores to perform better
 - Tracking sensitive and legal data - One would be able to search for a sensitive field across all datasets and figure out all at once
 
 Example:
+
 Let's say we're looking for \*ip_\*. Then it will return any tables (USER_DATA, RANDOM_DATA) that we store and match the pattern.
 <p align="center">
     <img src="output.png" alt="" width="100%">
@@ -90,6 +92,7 @@ python main.py
 
 ## Roadmap
 The tool can be extended...
+
 - point 1
 - point 2
 
