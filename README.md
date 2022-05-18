@@ -16,7 +16,6 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -25,29 +24,25 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+Datahub currently doesn't have a feature to allow one to search for databases based on fields. We propose a regex based field search powered by elasticsearch (this can be also done using lucene) on fields for better management and tracking of it. 
 
+Here's why:
+- Allow old data to be reused for new applications - Since one would first search for relevant fields before recreating another dataset
+- Save Money - As datasets will be reused we'll reduce the cost significantly
+- Improve performance - As the number of datasets will decrease in the system it would allow datastores to perform better
+- Tracking sensitive and legal data - One would be able to search for a sensitive field across all datasets and figure out all at once
+
+Example:
+Let's say we're looking for \*ip_\*. Then it will return any tables (USER_DATA, RANDOM_DATA) that we store and match the pattern.
 <p align="center">
     <img src="output.png" alt="" width="100%">
 </p>
 
-There are a lot of ToDO/Notes tracker available online, however, I didn't find one that is realtime and cross-platform at the same time for all devices and would suit my needs so I created this one.
-
-Here's why:
-
-- Multi-platform support accross all possible devices
-- Realtime changes reflected accross all platforms
-- Your time should be focused on completing your tasks and working on something amazing
-- Rather than you managing what to do next, this app helps you keep track of notes etc.
-- Fully secure with Google authentication and firebase database no need to worry about security as well :smile:
-
 ### Built With
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and some npm packages listed below:
-
-- [firebase](https://www.npmjs.com/package/firebase)
-- [reactstrap](https://www.npmjs.com/package/reactstrap)
-- [node-sass](https://www.npmjs.com/package/node-sass)
-- [gh-pages](https://www.npmjs.com/package/gh-pages)
+This project uses [elasticsearch](https://www.elastic.co/) and the api interface can be created in python, the project gives a proof of concept on how the api can be setup where the field_regex can be passed in param. Tools / technologies used:
+- [python](https://www.python.org/)
+- [elasticsearch python](https://elasticsearch-py.readthedocs.io/en/7.x/)
 
 <!-- GETTING STARTED -->
 
@@ -59,10 +54,9 @@ To get up and running with this project on your local machine follow these simpl
 
 Here's a list of things you'll need to use have prior to installing the software.
 
-- npm
-
-```sh
-npm install npm@latest -g
+- elasticsearch
+```
+# Refer: https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
 ```
 
 ### Installation
@@ -73,64 +67,31 @@ npm install npm@latest -g
 git clone https://github.com/avisionx/metadata-day-2022.git
 ```
 
-2. Install NPM packages
+2. Create virtualenv & activate it
 
 ```sh
-npm install
+python3 -m venv venv
+source venv/bin/activate
 ```
 
-3. Setup a firebase project in your [firebase console](https://console.firebase.google.com/) and click on "Add Firebase to your web app" to get prefilled config of this sorts
+3. Install dependencies
 
-```js
-var firebaseConfig = {
-  apiKey: "<your-api-key>",
-  authDomain: "<your-auth-domain>",
-  databaseURL: "<your-database-url>",
-  projectId: "<your-cloud-firestore-project>",
-  storageBucket: "<your-storage-bucket>",
-  messagingSenderId: "<your-sender-id>",
-};
+```sh
+pip install -r requirements.txt
 ```
 
-4. Replace the above config varibale in `index.js` inside src folder
+4. Run python script to run example searches
 
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Once installed here are some basic commands that you may run for working on the project.
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-**Learn More**
-_For more examples, please refer to the [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started)_
+```sh
+python main.py
+```
 
 <!-- ROADMAP -->
 
 ## Roadmap
-
-See the [open issues](https://github.com/avisionx/metadata-day-2022/issues) for a list of proposed features (and known issues).
+The tool can be extended...
+- point 1
+- point 2
 
 <!-- CONTRIBUTING -->
 
@@ -155,5 +116,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Avi Garg - [https://avisionx.net/](https://avisionx.net/) - hello@avisionx.net
+Debashish Ghosh - 
+Rishika Gupta - 
 
 Project Link: [https://github.com/avisionx/metadata-day-2022](https://github.com/avisionx/metadata-day-2022)
